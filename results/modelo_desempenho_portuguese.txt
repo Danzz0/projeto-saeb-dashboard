@@ -1,0 +1,31 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             portuguese   R-squared:                       0.391
+Model:                            OLS   Adj. R-squared:                  0.391
+Method:                 Least Squares   F-statistic:                     3089.
+Date:                Tue, 18 Aug 2026   Prob (F-statistic):               0.00
+Time:                        00:08:32   Log-Likelihood:            -1.6249e+05
+No. Observations:               37568   AIC:                         3.250e+05
+Df Residuals:                   37560   BIC:                         3.251e+05
+Df Model:                           7                                         
+Covariance Type:                  HC3                                         
+================================================================================================
+                                   coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+Intercept                      124.4413      1.909     65.187      0.000     120.700     128.183
+C(region)[T.Nordeste]            9.8125      0.436     22.486      0.000       8.957      10.668
+C(region)[T.Norte]               2.5065      0.452      5.542      0.000       1.620       3.393
+C(region)[T.Sudeste]             2.2224      0.363      6.122      0.000       1.511       2.934
+C(region)[T.Sul]                -0.0376      0.397     -0.095      0.925      -0.817       0.741
+C(urban_rural)[T.Urbana]         2.0122      0.285      7.054      0.000       1.453       2.571
+C(school_network)[T.Pública]    -6.4279      0.598    -10.745      0.000      -7.600      -5.255
+socioeconomic                   26.0901      0.300     87.003      0.000      25.502      26.678
+==============================================================================
+Omnibus:                     3017.152   Durbin-Watson:                   1.292
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             9142.988
+Skew:                           0.421   Prob(JB):                         0.00
+Kurtosis:                       5.265   Cond. No.                         104.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

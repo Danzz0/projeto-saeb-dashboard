@@ -1,0 +1,33 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   math   R-squared:                       0.328
+Model:                            OLS   Adj. R-squared:                  0.328
+Method:                 Least Squares   F-statistic:                     1886.
+Date:                Tue, 18 Aug 2026   Prob (F-statistic):               0.00
+Time:                        00:08:31   Log-Likelihood:            -1.6761e+05
+No. Observations:               37568   AIC:                         3.352e+05
+Df Residuals:                   37558   BIC:                         3.353e+05
+Df Model:                           9                                         
+Covariance Type:                  HC3                                         
+=======================================================================================================
+                                          coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------
+Intercept                              74.0083      4.456     16.607      0.000      65.274      82.743
+C(region)[T.Nordeste]                  64.9800      5.203     12.489      0.000      54.782      75.178
+C(region)[T.Norte]                     44.1823      5.165      8.554      0.000      34.059      54.306
+C(region)[T.Sudeste]                   16.2581      5.093      3.192      0.001       6.275      26.241
+C(region)[T.Sul]                        8.2483      5.967      1.382      0.167      -3.448      19.944
+socioeconomic                          34.6089      0.842     41.107      0.000      32.959      36.259
+socioeconomic:C(region)[T.Nordeste]   -10.9624      1.030    -10.641      0.000     -12.981      -8.943
+socioeconomic:C(region)[T.Norte]       -8.1967      1.014     -8.085      0.000     -10.184      -6.210
+socioeconomic:C(region)[T.Sudeste]     -2.8382      0.967     -2.935      0.003      -4.734      -0.943
+socioeconomic:C(region)[T.Sul]         -1.8078      1.114     -1.623      0.105      -3.991       0.375
+==============================================================================
+Omnibus:                    13133.948   Durbin-Watson:                   1.102
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           100110.974
+Skew:                           1.479   Prob(JB):                         0.00
+Kurtosis:                      10.430   Cond. No.                         574.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

@@ -1,0 +1,23 @@
+Validação dos cortes de proficiência (config.json -> proficiency_levels)
+Comparação entre percentuais calculados no pipeline e os percentuais oficiais do TS_ESCOLA por escola.
+Escolas comparadas: 36355
+
+portuguese nível 0: erro médio absoluto = 0.20 pp (n=31080)
+portuguese nível 1: erro médio absoluto = 0.16 pp (n=31080)
+portuguese nível 2: erro médio absoluto = 0.17 pp (n=31080)
+portuguese nível 3: erro médio absoluto = 0.17 pp (n=31080)
+portuguese nível 4: erro médio absoluto = 0.17 pp (n=31080)
+portuguese nível 5: erro médio absoluto = 0.14 pp (n=31080)
+portuguese nível 6: erro médio absoluto = 0.09 pp (n=31080)
+portuguese nível 7: erro médio absoluto = 0.03 pp (n=31080)
+portuguese nível 8: erro médio absoluto = 0.00 pp (n=31080)
+math nível 0: erro médio absoluto = 0.19 pp (n=31080)
+math nível 1: erro médio absoluto = 0.17 pp (n=31080)
+math nível 2: erro médio absoluto = 0.18 pp (n=31080)
+math nível 3: erro médio absoluto = 0.17 pp (n=31080)
+math nível 4: erro médio absoluto = 0.15 pp (n=31080)
+math nível 5: erro médio absoluto = 0.12 pp (n=31080)
+math nível 6: erro médio absoluto = 0.07 pp (n=31080)
+math nível 7: erro médio absoluto = 0.03 pp (n=31080)
+math nível 8: erro médio absoluto = 0.01 pp (n=31080)
+math nível 9: erro médio absoluto = 0.00 pp (n=31080)

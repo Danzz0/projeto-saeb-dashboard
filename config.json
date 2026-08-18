@@ -1,0 +1,38 @@
+{
+  "saeb_file": "data/raw/saeb.csv",
+  "saeb_school_file": "data/raw/TS_ESCOLA.csv",
+  "censo_file": "data/raw/censo_escolar.csv",
+  "output_dir": "results",
+  "processed_dir": "data/processed",
+  "figures_dir": "figures",
+  "target_grade": "9",
+  "columns": {
+    "school_id": ["ID_ESCOLA", "CO_ENTIDADE", "ID_ENTIDADE", "COD_ESCOLA"],
+    "grade": ["ID_SERIE", "TP_ETAPA_ENSINO"],
+    "year": ["ANO", "NU_ANO_SAEB", "NU_ANO_CENSO"],
+    "math": ["PROFICIENCIA_MT_SAEB", "PROFICIENCIA_MATEMATICA", "PROFICIENCIA_MAT", "PROFICIENCIA_MAT_9EF"],
+    "portuguese": ["PROFICIENCIA_LP_SAEB", "PROFICIENCIA_LINGUA_PORTUGUESA", "PROFICIENCIA_PORTUGUES", "PROFICIENCIA_LP_9EF"],
+    "socioeconomic": ["INSE_ALUNO", "INSE", "NIVEL_SOCIOECONOMICO", "INDICE_SOCIOECONOMICO"],
+    "weight_math": ["PESO_ALUNO_MT", "PESO_ALUNO", "PESO"],
+    "weight_portuguese": ["PESO_ALUNO_LP", "PESO_ALUNO", "PESO"],
+    "weight_inse": ["PESO_ALUNO_INSE", "PESO_ALUNO", "PESO"],
+    "region_code": ["ID_REGIAO", "CO_REGIAO"],
+    "state_code": ["ID_UF", "CO_UF"],
+    "urban_rural_code": ["ID_LOCALIZACAO", "TP_LOCALIZACAO"],
+    "school_network_code": ["IN_PUBLICA"],
+    "region": ["NO_REGIAO"],
+    "state": ["SG_UF", "NO_UF"]
+  },
+  "code_labels": {
+    "urban_rural": {"1": "Urbana", "2": "Rural"},
+    "school_network": {"1": "Pública", "0": "Privada"}
+  },
+  "proficiency_levels": {
+    "_comment": "Cortes da escala SAEB (0-500) para o 9o ano do Ensino Fundamental, em intervalos de 25 pontos. O pipeline valida essas faixas contra os percentuais oficiais NIVEL_*_MT9/LP9 do TS_ESCOLA e grava o erro em results/validacao_niveis_proficiencia.txt.",
+    "math_9ef": [200, 225, 250, 275, 300, 325, 350, 375, 400],
+    "portuguese_9ef": [200, 225, 250, 275, 300, 325, 350, 375]
+  },
+  "notes": {
+    "_id_escola_id_municipio": "ID_ESCOLA e ID_MUNICIPIO em data/raw/saeb.csv NAO usam o mesmo espaco de codigos de CO_ENTIDADE/CO_MUNICIPIO em data/raw/censo_escolar.csv (intersecao vazia nos dois casos) — nao ha chave de escola ou municipio em comum entre os dois arquivos. Apenas o codigo de UF (ID_UF/CO_UF) e compativel entre os arquivos (os 27 codigos batem). Por isso o pipeline usa o Censo Escolar somente para montar uma tabela pequena de codigo->nome de UF/regiao, e aplica essa tabela em cima dos codigos que ja existem no proprio SAEB, em vez de tentar unir os dois arquivos linha a linha por escola."
+  }
+}

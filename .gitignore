@@ -1,0 +1,9 @@
+data/raw/
+data/processed/base_analitica.csv
+run*.log
+.claude/
+__pycache__/
+*.pyc
+MICRODADOS_SAEB_2023/
+microdados_censo_escolar_2023/
+*.zip
